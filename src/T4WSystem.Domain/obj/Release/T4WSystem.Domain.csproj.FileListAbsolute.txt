@@ -1,0 +1,5 @@
+C:\Users\Erick Freitas\Documents\Visual Studio 2017\Projects\T4WSystem\src\T4WSystem.Domain\bin\Release\T4WSystem.Domain.dll
+C:\Users\Erick Freitas\Documents\Visual Studio 2017\Projects\T4WSystem\src\T4WSystem.Domain\bin\Release\T4WSystem.Domain.pdb
+C:\Users\Erick Freitas\Documents\Visual Studio 2017\Projects\T4WSystem\src\T4WSystem.Domain\obj\Release\T4WSystem.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Erick Freitas\Documents\Visual Studio 2017\Projects\T4WSystem\src\T4WSystem.Domain\obj\Release\T4WSystem.Domain.dll
+C:\Users\Erick Freitas\Documents\Visual Studio 2017\Projects\T4WSystem\src\T4WSystem.Domain\obj\Release\T4WSystem.Domain.pdb

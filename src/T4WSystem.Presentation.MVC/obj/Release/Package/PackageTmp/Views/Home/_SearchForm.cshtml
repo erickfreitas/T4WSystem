@@ -1,0 +1,50 @@
+﻿@using T4WSystem.Application.ViewModels
+@using T4WSystem.Presentation.MVC.Utilities
+@model CriteriaViewModel
+
+<form method="post">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="book_tabel_item">
+                <div class="form-group">
+                    <div class='input-group date' id='datetimepicker11'>
+                        @Html.TextBoxFor(model => model.CheckinDate, new { placeholder = "Data de Checkin", @class = "form-control", autocomplete = "off", @readonly="readonly" })
+                        <span class="input-group-addon">
+                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    @Html.ValidationMessageFor(model => model.CheckinDate, "", new { @class = "error" })
+                </div>
+                <div class="form-group">
+                    @Html.DropDownListFor(model => model.DestinationId, ListGenerator.GenerateDestinations(), new { @class = "wide"})
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="book_tabel_item">
+                <div class="input-group">
+                    @Html.DropDownListFor(model => model.NumAdults, ListGenerator.GenerateAdultsNumbers(), new { @class = "wide" })
+                    @Html.ValidationMessageFor(model => model.NumAdults, "", new { @class = "error" })
+                </div>
+                <div class="input-group">
+                    @Html.DropDownListFor(model => model.ChildAges, ListGenerator.GenerateChildAges(), new { @class = "wide" })
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="book_tabel_item">
+                <div class="input-group">
+                    @Html.DropDownListFor(model => model.NumNights, ListGenerator.GenerateNumNights(), new { @class = "wide" })
+                </div>
+                <div class="input-group">
+                    @Html.DropDownListFor(model => model.Quantity, ListGenerator.GenerateRoomQuantity(), new { @class = "wide" })
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-md-offset-4">
+            <div class="book_tabel_item">
+                <button type="submit" class="book_now_btn button_hover" href="#">Buscar</button>
+            </div>
+        </div>
+    </div>
+</form>

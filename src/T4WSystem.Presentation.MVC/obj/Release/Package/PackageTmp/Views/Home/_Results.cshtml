@@ -1,0 +1,33 @@
+﻿@using T4WSystem.Application.ViewModels
+@model IEnumerable<RoomViewModel>
+<section class="accomodation_area section_gap">
+    <div class="container">
+        <div class="section_title text-center">
+            <h2 class="title_color">Acomodações</h2>
+            <p>Confira as melhores ofertas de hospedagem</p>
+        </div>
+        <div class="row mb_30">
+            @{ var random = new Random();}
+            @foreach (var room in Model)
+            {
+                <div class="col-lg-3 col-sm-6">
+                    <div class="accomodation_item text-center">
+                        <div class="hotel_img">
+                            <img src="~/Royal/image/room@(random.Next(1, 4)).jpg" alt="">
+                            <a href="#" class="btn theme_btn button_hover">Reservar</a>
+                        </div>
+                        @if (room.BoardDescription != "n/d")
+                        {
+                            <a href="#"><h4 class="sec_h4">@room.BoardDescription</h4></a>
+                        }
+                        else
+                        {
+                            <a href="#"><h4 class="sec_h4">@room.RoomDescription</h4></a>
+                        }
+                        <h5>$ @room.SellingPricePerRoom.Value</h5>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>
